@@ -1,8 +1,11 @@
 import React from "react"
-import Routes from "src/routes/routes"
 
-function App() {
-  return <Routes />
+const App: React.FC = () => {
+  return (
+  <div>
+    Welcome Vinayak
+  </div>
+  )
 }
 
 export default App
