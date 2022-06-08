@@ -51,4 +51,11 @@ Install following npm packages.
 
 $ npm i bulma redux react-redux react-router-dom firebase redux-thunk redux-devtools-extension @types/react-redux @types/react-router-dom
 
-REACT_APP_FIREBASE_DB_URL=https://react-typescript-firebas-94691.firebaseio.com
+- After creating firebase project and adding it to react app, Add following rule in database
+match/users/{userId} {
+    allow read, update, delete: if request.auth != null && request.auth.uid = userId;
+    allow create: if true;
+}
+
+-- install @reduxjs/toolkit for using configureStore. createStore is deprecated.
+$ npm install @reduxjs/toolkit
